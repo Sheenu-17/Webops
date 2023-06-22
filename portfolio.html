@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seema Rani</title>
+  <style>
+    /* CSS code goes here */
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color:  #f8f1e9;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FF5F1F;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: rgb(28, 0, 110);
+    }
+
+    nav a:hover {
+      color: rgb(242, 255, 0);
+    }
+
+    section {
+      padding: 50px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .portfolio-item {
+      margin-bottom: 50px;
+    }
+
+    .portfolio-item img {
+      max-width: 100%;
+    }
+
+    .portfolio-item h3 {
+      margin-top: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form textarea {
+      height: 200px;
+    }
+
+    form button[type="submit"] {
+      background-color: #FF5F1F;
+      color: rgb(28, 0, 110);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button[type="submit"]:hover {
+      background-color: #FF5F1F;
+    }
+
+    footer {
+      background-color: #FF5F1F;
+      color: rgb(28, 0, 110);
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 20px;
+      }
+    }
+
+    #back-to-top {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #FF5F1F;
+      color: rgb(28, 0, 110);
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #back-to-top:hover {
+      color: rgb(242, 255, 0);
+    }
+    #send_button:hover {
+      color: rgb(242, 255, 0);
+    }
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  /* Add any additional styling you want for the sticky header */
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Seema Rani</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello, I am Seema Rani, a third-year student at IIT Madras.</p>
+    <p> I am passionate about solving complex problems and building innovative solutions.</p>
+
+        <!-- <p>I have completed internships with Narrato and Supernova where I developed skills in keyword extraction, ranking algorithms, code optimization, and web scraping. Additionally, I am an upcoming Starts and Quants Summer Associate at Morgan Stanley and have worked with Google on a productivity tracker project.</p> -->
+        
+       <p> My technical skills include proficiency in programming languages such as C, C++, Python, JavaScript, and HTML.</p>
+        
+        <!-- <p>I have completed several course projects, including designing a pipelined processor simulator and a Hack computer simulation using HDL language and Nand2Tetris. Currently, I am working on a course project to develop an ontology for the hotel management domain.</p> -->
+        
+        <p>Overall, I am a highly motivated and dedicated individual with a passion for technology and a proven track record of success. I am excited to continue pursuing my passion for solving complex problems and building innovative solutions.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Internships and Projects</h2>
+    <div class="portfolio-item">
+      <!-- <img src="https://via.placeholder.com/400x300" alt="Project 1"> -->
+      <h3>Project name</h3>
+      <p>Company/Course</p>
+      <select onchange="toggleDetails('project1')">
+        <option selected>Choose an action</option>
+        <option value="view">View Details</option>
+        <option value="hide">Hide Details</option>
+      </select>
+      <div class="details" id="project1-details" style="display: none;">
+        <p>- Description</p>
+        <!-- <p>  - Implemented an algorithm for keyword extraction and ranking, and optimized it to reduce query execution time by 50%.</p> -->
+            <!-- <p> - Designed an algorithm for content brief recommendations based on word, paragraph, heading, and keyword counts.</p> -->
+      </div>
+    </div>
+
+      <div class="portfolio-item">
+        <!-- <img src="https://via.placeholder.com/400x300" alt="Project 3"> -->
+        <h3>Stock Analyser</h3>
+        <p>Trading project</p>
+        <select onchange="toggleDetails('project5')">
+          <option selected>Choose an action</option>
+          <option value="view">View Details</option>
+          <option value="hide">Hide Details</option>
+        </select>
+        <div class="details" id="project5-details" style="display: none;">
+          <!-- <p> - Automated Trading Bot (ATB): Developed a trading bot that uses Renko charts to make trading decisions based on predefined entry and exit conditions. The bot also includes a feature to alert the user when these conditions are met and can place orders automatically or manually through an API.</p>
+
+            <p> Data Analysis: Collected OHLC data from an API and used it to generate Renko charts for more accurate trading decisions. Implemented a variable brick size algorithm to improve the accuracy of the charts and enable greater flexibility in trading strategies.</p>
+            
+           <p> Investment Strategy Development: Created a framework for selecting which stocks to invest in based on historical data and other factors, such as sector and correlation. Incorporated a buffer fund and catastrophe condition detection to mitigate risk and maximize returns.</p> -->
+          
+        </div>
+      </div>
+
+  </section>
+  
+  <script>
+    // JavaScript code goes here
+    function toggleDetails(project) {
+      const selectBox = document.querySelector(`select[onchange="toggleDetails('${project}')"]`);
+      const details = document.getElementById(`${project}-details`);
+      
+      if (selectBox.value === "view") {
+        details.style.display = "block";
+      } else if (selectBox.value === "hide") {
+        details.style.display = "none";
+      }
+    }
+  </script>
+  
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button id="send_button" type="submit">Send</button>
+      </form>
+    </section>
+
+    
+
+
+    <footer>
+      &copy; 2023 Seema Rani. All rights reserved.
+    </footer>
+    
+  <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+  
+    <script>
+      // JavaScript code goes here
+      function showDetails(project) {
+        const details = document.getElementById(`${project}-details`);
+        details.style.display = "block";
+      }
+  
+      function hideDetails(project) {
+        const details = document.getElementById(`${project}-details`);
+        details.style.display = "none";
+      }
+  
+      // function submitForm(event) {
+      //   event.preventDefault();
+      //   const name = document.getElementById("name").value;
+      //   const email = document.getElementById("email").value;
+      //   const message = document.getElementById("message").value;
+      //   console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      //   document.getElementById("contact-form").reset();
+      //   alert("Message sent successfully!");
+      // }
+  
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+  
+      window.addEventListener("scroll", function() {
+        const backToTopButton = document.getElementById("back-to-top");
+        if (window.pageYOffset > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+      });
+      const sections = document.querySelectorAll('section');
+
+    window.addEventListener("scroll", function() {
+    let currentSection = "";
+
+    sections.forEach(function(section) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        currentSection = section.getAttribute("id");
+        }
+    });
+
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(function(link) {
+        link.classList.remove("active");
+        if (link.getAttribute("href").slice(1) === currentSection) {
+        link.classList.add("active");
+        }
+    });
+    function showDetails(project, action) {
+    const details = document.getElementById(`${project}-details`);
+    if (action === "view") {
+        details.style.display = "block";
+    } else if (action === "hide") {
+        details.style.display = "none";
+    }
+    }
+    });
+    // Smooth scrolling for navigation links
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('nav a');
+
+  for (const link of navLinks) {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+// Sticky header
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  const headerHeight = header.offsetHeight;
+
+  if (window.pageYOffset > headerHeight) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+function submitForm(event) {
+  event.preventDefault();
+  
+  // Retrieve form inputs
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  
+  // Validate inputs
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+  
+  if (name === "") {
+    showError(nameInput, "Name is required");
+    return;
+  }
+  
+  if (email === "") {
+    showError(emailInput, "Email is required");
+    return;
+  } else if (!isValidEmail(email)) {
+    showError(emailInput, "Please enter a valid email");
+    return;
+  }
+  
+  if (message === "") {
+    showError(messageInput, "Message is required");
+    return;
+  }
+  
+  // Form submission successful
+  // Clear form inputs
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+  
+  // Display success message
+  alert("Message sent successfully!");
+}
+
+function showError(input, message) {
+  const formControl = input.parentElement;
+  const errorElement = formControl.querySelector(".error-message");
+  
+  // Set error message
+  errorElement.textContent = message;
+  
+  // Add error class to the form control
+  formControl.classList.add("error");
+  
+  // Scroll to the first error message
+  input.scrollIntoView({ behavior: "smooth", block: "center" });
+  
+  // Focus on the input field with the error
+  input.focus();
+}
+
+function isValidEmail(email) {
+  // Regular expression for email validation
+  const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  return emailRegex.test(email);
+}
+
+// Attach event listener to form submit event
+const contactForm = document.getElementById("contact-form");
+contactForm.addEventListener("submit", submitForm);
+
+
+
+</script>
+
+</body>
+</html>
+  
+  
+  
